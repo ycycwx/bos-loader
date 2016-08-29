@@ -5,6 +5,7 @@ webpack loader for baidu bos
 ```javascript
 // webpack.config.js
 
+// develop mode
 {
     resolveLoader: {
         alias: {
@@ -20,7 +21,7 @@ webpack loader for baidu bos
     }
 }
 
-if (isProduction) {
+// production mode add
 {
     bos: {
         bucket: '$bucket',
@@ -30,5 +31,4 @@ if (isProduction) {
         prefix: '$prefix' // 替换时候的前缀
     }
 }
-)
 ```
