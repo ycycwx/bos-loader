@@ -1,17 +1,17 @@
 # bos-loader
-webpack loader for baidu bos
+webpack loader for baidu bos cdn
+
+# install
+``` bash
+npm install bos-loader
+```
 
 # usage
-```javascript
+``` javascript
 // webpack.config.js
 
 // develop mode
 {
-    resolveLoader: {
-        alias: {
-            'bos-loader': `_dir_your_path_`
-        }
-    },
     module: {
         loaders: [{
             // 小于8192byte的图片转成base64码
@@ -21,7 +21,7 @@ webpack loader for baidu bos
     }
 }
 
-// production mode add
+// production mode should append
 {
     bos: {
         bucket: '$bucket',
