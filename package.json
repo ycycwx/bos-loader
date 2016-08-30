@@ -1,6 +1,6 @@
 {
   "name": "bos-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "webpack loader for baidu bos cdn",
   "main": "index.js",
   "scripts": {
