@@ -15,8 +15,10 @@ npm install bos-loader
     module: {
         loaders: [{
             // 小于8192byte的图片转成base64码
+            // 8192byte - 50000byte之间的会重命名并打包进img文件夹内
+            // 大于50000byte的图片会重命名并打包进img文件夹内
             test: /\.(png|jpg|gif)$/,
-            loader: 'bos-loader?limit=8192' + (isProduction ? '&upload' : '')
+            loader: 'bos?limit=10000&name=img/[name]_[hash:8].[ext]' + (DEBUG ? '' : '&upload=50000')
         }]
     }
 }
