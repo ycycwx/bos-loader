@@ -1,5 +1,5 @@
 # bos-loader
-webpack loader for baidu bos cdn
+webpack loader for bos cdn
 
 # install
 ``` bash
