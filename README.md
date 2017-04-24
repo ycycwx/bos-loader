@@ -1,5 +1,4 @@
 # bos-loader
-=======
 
 [![NPM version](https://img.shields.io/npm/v/bos-loader.svg?style=flat)](https://npmjs.com/package/bos-loader)
 [![NPM downloads](https://img.shields.io/npm/dm/bos-loader.svg?style=flat)](https://npmjs.com/package/bos-loader)
