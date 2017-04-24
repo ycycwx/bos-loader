@@ -1,12 +1,23 @@
 # bos-loader
+=======
+
+[![NPM version](https://img.shields.io/npm/v/bos-loader.svg?style=flat)](https://npmjs.com/package/bos-loader)
+[![NPM downloads](https://img.shields.io/npm/dm/bos-loader.svg?style=flat)](https://npmjs.com/package/bos-loader)
+
 webpack loader for bos cdn
 
-# install
+## Install
+
 ``` bash
+# use npm
 npm install bos-loader
+
+# use yarn
+yarn add bos-loader
 ```
 
-# usage
+## Usage
+
 ``` javascript
 // webpack.config.js
 
@@ -14,9 +25,9 @@ npm install bos-loader
 {
     module: {
         loaders: [{
-            // 小于8192byte的图片转成base64码
-            // 8192byte - 50000byte之间的会重命名并打包进img文件夹内
-            // 大于50000byte的图片会重命名并打包进img文件夹内
+            // base64 : size < 8192 byte
+            // img/   : 8192 byte < size < 50000 byte
+            // bos    : size > 50000 byte
             test: /\.(png|jpg|gif)$/,
             loader: 'bos?limit=10000&name=img/[name]_[hash:8].[ext]' + (DEBUG ? '' : '&upload=50000')
         }]
@@ -30,7 +41,8 @@ npm install bos-loader
         endpoint: '$endpoint',
         ak: '$ak',
         sk: '$sk',
-        prefix: '$prefix' // 替换时候的前缀
+        prefix: '$prefix'
     }
 }
 ```
+
